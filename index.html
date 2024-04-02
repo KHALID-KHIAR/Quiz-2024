@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Ribatis</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="choix">
+        <button class="pers-physi" onclick="showPersonnePhysique()">Persone PHYSIQUE</button>
+        <button class="pers-physi" onclick="showPersonneMorale()">Persone MORALE</button>
+    </div>
+
+
+    <form class="personne_physique_container animate__animated" onsubmit="onSubmitPersonnePhysique()">
+        <!-- PERSONNE PHYSIQUE -->
+        <h3 class="title">PERSONNE PHYSIQUE</h3>
+        <main class="fields-container">
+        <div class="field-container">
+            <label>Civilité</label>
+            <select name="civilite" required>
+                <option>MONSIEUR</option>
+                <option>MADAME</option>
+            </select>
+        </div>
+        <div class="field-container">
+            <label>Nom</label>
+            <input type="text" required name="nom">
+        </div>
+        <div class="field-container">
+            <label>Prenom</label>
+            <input type="text" required name="Prenom">
+        </div>
+        <div class="field-container">
+            <label>CIN</label>
+            <input type="text" required name="cin">
+        </div>
+        <div class="field-container">
+            <label>Date fin de validité pièce identité</label>
+            <input type="text" required onfocus="(this.type='date')" onblur="(this.type='text')" name="data_fin_piece_identite">
+        </div>
+        <div class="field-container">
+            <label>Lieu délivrance pièce d’identité</label>
+            <input type="text" required name="lieu_delivrance_piece">
+        </div>
+        <div class="field-container">
+            <label>Nationalité</label>
+            <select name="nationalite">
+                <option>Algeria</option>
+                <option selected>Maroc</option>
+            </select>
+        </div>
+
+        <div class="field-container">
+            <label>Date de Naissance</label>
+            <input type="text" required onfocus="(this.type='date')" onblur="(this.type='text')" name="date_naissance">
+        </div>
+
+        <div class="field-container">
+            <label>Lieu de Naissance</label>
+            <input type="text" required name="lieu_naissance">
+        </div>
+
+        <div class="field-container">
+            <label>Téléphone</label>
+            <input type="tel" required name="telephone" pattern="[0-9]{9}"
+                title="Vous devez saisir un numero de telephone avec 9 chiffres !">
+        </div>
+        <div class="field-container">
+            <label>Email</label>
+            <input type="email" required name="email">
+        </div>
+        <div class="field-container">
+            <label>Adresse</label>
+            <input type="text" required name="adresse">
+        </div>
+
+        <div class="field-container">
+            <label>Pays</label>
+            <select name="pays" required>
+                <option>Algeria</option>
+                <option selected>Maroc</option>
+            </select>
+        </div>
+        <div class="field-container">
+            <label>Ville</label>
+            <select name="ville" required>
+                <option>Oujda</option>
+                <option selected>Casablanca</option>
+            </select>
+        </div>
+    </main>
+    <div class="button-container">
+        <button type="reset">Réinitialiser</button>
+        <button type="submit">Valider</button>
+    </div>
+    
+</form>
+
+<form class="personne_morale_container animate__animated" onsubmit="onSubmitPersonneMorale()">
+    <!-- PERSONNE MORALE -->
+    <h3 class="title">PERSONNE MORALE</h3>
+    
+    <main class="fields-container">
+        <div class="field-container">
+            <label>Raison Sociale</label>
+            <input type="text" required name="raison_Sociale">
+        </div>
+        <div class="field-container">
+            <label>RC/ICE</label>
+            <input type="text" required name="rc_ice">
+        </div>
+        <div class="field-container">
+            <label>Adresse</label>
+            <input type="text" required name="raison_Sociale">
+        </div>
+        <div class="field-container">
+            <label for="pays">Pays</label>
+                <select id="pays">
+                    <option>Algeria</option>
+                    <option selected>Maroc</option>
+                </select>
+        </div>
+        <div class="field-container">
+            <label for="ville">ville</label>
+            <select id="ville">
+                <option>Oujda</option>
+                <option selected>Casablaca</option>
+            </select>
+        </div>
+    </main>
+
+    <div class="button-container">
+        <button type="reset">Réinitialiser</button>
+        <button type="submit">Valider</button>
+    </div>
+
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
