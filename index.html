@@ -11,8 +11,8 @@
 
 <body>
     <div class="choix">
-        <button class="pers-physi" onclick="showPersonnePhysique()">Persone PHYSIQUE</button>
-        <button class="pers-physi" onclick="showPersonneMorale()">Persone MORALE</button>
+        <button class="pers-physi" onclick="showPersonnePhysique()">PERSONNE PHYSIQUE</button>
+        <button class="pers-physi" onclick="showPersonneMorale()">PERSONNE MORALE</button>
     </div>
 
 
@@ -49,9 +49,7 @@
         </div>
         <div class="field-container">
             <label>Nationalité</label>
-            <select name="nationalite">
-                <option>Algeria</option>
-                <option selected>Maroc</option>
+            <select name="nationalite" id="select-pays1">
             </select>
         </div>
 
@@ -81,16 +79,12 @@
 
         <div class="field-container">
             <label>Pays</label>
-            <select name="pays" required>
-                <option>Algeria</option>
-                <option selected>Maroc</option>
+            <select name="pays" required id="select-pays2" onchange="getCitiesOfCountry_Personne_physique()">
             </select>
         </div>
         <div class="field-container">
             <label>Ville</label>
-            <select name="ville" required>
-                <option>Oujda</option>
-                <option selected>Casablanca</option>
+            <select name="ville" required id="select-ville1">
             </select>
         </div>
     </main>
@@ -120,16 +114,12 @@
         </div>
         <div class="field-container">
             <label for="pays">Pays</label>
-                <select id="pays">
-                    <option>Algeria</option>
-                    <option selected>Maroc</option>
+                <select id="select-pays3" onchange="getCitiesOfCountry_Personne_morale()">
                 </select>
         </div>
         <div class="field-container">
             <label for="ville">ville</label>
-            <select id="ville">
-                <option>Oujda</option>
-                <option selected>Casablaca</option>
+            <select  id="select-ville2">
             </select>
         </div>
     </main>
