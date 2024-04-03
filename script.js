@@ -33,7 +33,7 @@ function getCountries(select_country){
     })
 }
 
-function getCities_physique(selected_Country,selected_ville){
+function getCities_physique(selected_Country){
     fetch("https://countriesnow.space/api/v0.1/countries")
     .then(res=>{
         if(!res.ok){
@@ -63,7 +63,7 @@ function getCities_physique(selected_Country,selected_ville){
         }
     })
 }
-function getCities_morale(selected_Country,selected_ville){
+function getCities_morale(selected_Country){
     fetch("https://countriesnow.space/api/v0.1/countries")
     .then(res=>{
         if(!res.ok){
@@ -105,7 +105,8 @@ function getCitiesOfCountry_Personne_morale(){
 getCountries(select_country1);
 getCountries(select_country2);
 getCountries(select_country3);
-
+getCities_physique("Morocco");
+getCities_morale("Morocco");
 
 
 function onSubmitPersonnePhysique(){
